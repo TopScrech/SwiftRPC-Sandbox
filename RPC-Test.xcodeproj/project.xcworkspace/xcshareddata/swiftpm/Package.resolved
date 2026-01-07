@@ -1,0 +1,24 @@
+{
+  "originHash" : "9abc584493c25858dd1e6cfe72ebbb0ee04fafd5bf759088d02cb065cc29339e",
+  "pins" : [
+    {
+      "identity" : "bluesocket",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/IBM-Swift/BlueSocket.git",
+      "state" : {
+        "revision" : "7b23a867008e0027bfd6f4d398d44720707bc8ca",
+        "version" : "2.0.4"
+      }
+    },
+    {
+      "identity" : "swordrpc",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/TopScrech/SwordRPC",
+      "state" : {
+        "branch" : "master",
+        "revision" : "2c9a4a21cca69f4fef4e4380f79f2a7ea9ec1d87"
+      }
+    }
+  ],
+  "version" : 3
+}
