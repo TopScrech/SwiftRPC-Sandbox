@@ -1,7 +1,7 @@
 import ScrechKit
 
 struct ContentView: View {
-    @StateObject private var model = RPCVM()
+    @State private var model = RPCVM()
     
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {

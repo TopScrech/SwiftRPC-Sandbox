@@ -2,16 +2,17 @@ import Foundation
 import Combine
 import SwordRPC
 
-final class RPCVM: ObservableObject {
+@Observable
+final class RPCVM {
     private var appId = "1367291003089715251"
-    @Published var details = "Testing SwordRPC"
-    @Published var state = "In a test app"
-    @Published var largeImageKey = ""
-    @Published var largeImageText = ""
-    @Published var smallImageKey = ""
-    @Published var smallImageText = ""
-    @Published private(set) var statusMessage = "Disconnected"
-    @Published private(set) var isConnected = false
+    var details = "Sandbox"
+    var state = "Sandboxing"
+    var largeImageKey = ""
+    var largeImageText = ""
+    var smallImageKey = ""
+    var smallImageText = ""
+    private(set) var statusMessage = "Disconnected"
+    private(set) var isConnected = false
     
     private var rpc: SwordRPC?
     private var activeAppId: String?
