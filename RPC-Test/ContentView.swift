@@ -17,7 +17,7 @@ struct ContentView: View {
                         Button("Connect", action: model.connect)
                         
                         Text(model.statusMessage)
-                            .foregroundStyle(model.isConnected ? Color.green : Color.secondary)
+                            .foregroundStyle(model.isConnected ? .green : .secondary)
                     }
                 }
                 
