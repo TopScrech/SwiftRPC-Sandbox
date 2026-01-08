@@ -3,7 +3,7 @@ import Combine
 import SwordRPC
 
 final class RPCVM: ObservableObject {
-    @Published var appId = ""
+    private var appId = "1367291003089715251"
     @Published var details = "Testing SwordRPC"
     @Published var state = "In a test app"
     @Published var largeImageKey = ""

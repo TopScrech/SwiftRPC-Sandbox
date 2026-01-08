@@ -13,11 +13,8 @@ struct ContentView: View {
             
             Form {
                 Section("Connection") {
-                    TextField("Application ID", text: $model.appId)
-                    
                     HStack {
                         Button("Connect", action: model.connect)
-                            .disabled(model.appId.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
                         
                         Text(model.statusMessage)
                             .foregroundStyle(model.isConnected ? Color.green : Color.secondary)
