@@ -1,5 +1,5 @@
 {
-  "originHash" : "9abc584493c25858dd1e6cfe72ebbb0ee04fafd5bf759088d02cb065cc29339e",
+  "originHash" : "114bf86384632c855bc13b03f49c6d9dd339077b4489a80a179807f846218479",
   "pins" : [
     {
       "identity" : "bluesocket",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "7b23a867008e0027bfd6f4d398d44720707bc8ca",
         "version" : "2.0.4"
+      }
+    },
+    {
+      "identity" : "screchkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/TopScrech/ScrechKit",
+      "state" : {
+        "branch" : "main",
+        "revision" : "257427e6612bfb87a74a58b541b759796d9723e7"
       }
     },
     {

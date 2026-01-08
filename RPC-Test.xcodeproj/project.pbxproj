@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F3A79D262F0E5B920078BEDC /* SwordRPC in Frameworks */ = {isa = PBXBuildFile; productRef = F3A79D252F0E5B920078BEDC /* SwordRPC */; };
+		F3A79D2B2F0F418A0078BEDC /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3A79D2A2F0F418A0078BEDC /* ScrechKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3A79D262F0E5B920078BEDC /* SwordRPC in Frameworks */,
+				F3A79D2B2F0F418A0078BEDC /* ScrechKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +73,7 @@
 			name = "RPC-Test";
 			packageProductDependencies = (
 				F3A79D252F0E5B920078BEDC /* SwordRPC */,
+				F3A79D2A2F0F418A0078BEDC /* ScrechKit */,
 			);
 			productName = "RPC-Test";
 			productReference = F3EAC0662F0E59C50073C45D /* RPC-Test.app */;
@@ -102,6 +105,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				F3A79D242F0E5B920078BEDC /* XCRemoteSwiftPackageReference "SwordRPC" */,
+				F3A79D292F0F418A0078BEDC /* XCRemoteSwiftPackageReference "ScrechKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F3EAC0672F0E59C50073C45D /* Products */;
@@ -281,7 +285,7 @@
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
@@ -312,7 +316,7 @@
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Release;
 		};
@@ -348,6 +352,14 @@
 				kind = branch;
 			};
 		};
+		F3A79D292F0F418A0078BEDC /* XCRemoteSwiftPackageReference "ScrechKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TopScrech/ScrechKit";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -355,6 +367,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F3A79D242F0E5B920078BEDC /* XCRemoteSwiftPackageReference "SwordRPC" */;
 			productName = SwordRPC;
+		};
+		F3A79D2A2F0F418A0078BEDC /* ScrechKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3A79D292F0F418A0078BEDC /* XCRemoteSwiftPackageReference "ScrechKit" */;
+			productName = ScrechKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
