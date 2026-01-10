@@ -4,7 +4,7 @@ import SwordRPC
 
 @Observable
 final class RPCVM {
-    private var appId = "1367291003089715251"
+    var appId = "1367291003089715251"
     var details = "Sandbox"
     var state = "Sandboxing"
     var largeImageKey = ""
