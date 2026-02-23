@@ -1,5 +1,5 @@
 import Foundation
-import SwordRPC
+import SwiftRPC
 import Socket
 
 @Observable
@@ -14,9 +14,9 @@ final class RPCVM {
     private(set) var statusMessage = "Disconnected"
     private(set) var isConnected = false
     
-    private var rpc: SwordRPC?
+    private var rpc: SwiftRPC?
     private var activeAppId: String?
-    private var retiredRPCs: [SwordRPC] = []
+    private var retiredRPCs: [SwiftRPC] = []
     
     func connect() {
         let trimmed = appId.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -27,7 +27,7 @@ final class RPCVM {
         }
         
         if rpc == nil || activeAppId != trimmed {
-            rpc = SwordRPC(appId: trimmed)
+            rpc = SwiftRPC(appId: trimmed)
             activeAppId = trimmed
             wireHandlers()
         }
@@ -35,18 +35,18 @@ final class RPCVM {
         setStatus("Connecting...")
         rpc?.connect()
     }
-
+    
     func disconnect() {
         guard let rpc else {
             setConnection(connected: false, message: "Disconnected")
             return
         }
-
+        
         guard closeSocket(in: rpc) else {
             setStatus("Disconnect unsupported by current package API")
             return
         }
-
+        
         retiredRPCs.append(rpc)
         self.rpc = nil
         activeAppId = nil
@@ -92,35 +92,35 @@ final class RPCVM {
             self?.setConnection(connected: false, message: "Error \(code): \(message)")
         }
     }
-
-    private func closeSocket(in rpc: SwordRPC) -> Bool {
+    
+    private func closeSocket(in rpc: SwiftRPC) -> Bool {
         guard let socket = reflectedSocket(in: rpc) else {
             return false
         }
-
+        
         socket.close()
         return true
     }
-
-    private func reflectedSocket(in rpc: SwordRPC) -> Socket? {
+    
+    private func reflectedSocket(in rpc: SwiftRPC) -> Socket? {
         let rpcMirror = Mirror(reflecting: rpc)
-
+        
         for child in rpcMirror.children where child.label == "socket" {
             if let socket = child.value as? Socket {
                 return socket
             }
-
+            
             let optionalMirror = Mirror(reflecting: child.value)
-
+            
             guard optionalMirror.displayStyle == .optional else {
                 continue
             }
-
+            
             if let socket = optionalMirror.children.first?.value as? Socket {
                 return socket
             }
         }
-
+        
         return nil
     }
     

@@ -2,7 +2,7 @@ import ScrechKit
 
 struct ContentView: View {
     @State private var model = RPCVM()
-
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {

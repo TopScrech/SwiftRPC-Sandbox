@@ -4,7 +4,7 @@ struct CardView<Content: View>: View {
     private let title: String
     private let subtitle: String
     @ViewBuilder private let content: () -> Content
-
+    
     init(_ title: String, subtitle: String, @ViewBuilder content: @escaping () -> Content) {
         self.title = title
         self.subtitle = subtitle

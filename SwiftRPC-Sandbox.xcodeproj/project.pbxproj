@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F3A79D262F0E5B920078BEDC /* SwordRPC in Frameworks */ = {isa = PBXBuildFile; productRef = F3A79D252F0E5B920078BEDC /* SwordRPC */; };
+		F356DE452F4C3F3800387631 /* SwiftRPC in Frameworks */ = {isa = PBXBuildFile; productRef = F356DE422F4C3F3800387631 /* SwiftRPC */; };
+		F356DE462F4C3F3800387631 /* Socket in Frameworks */ = {isa = PBXBuildFile; productRef = F356DE442F4C3F3800387631 /* Socket */; };
 		F3A79D2B2F0F418A0078BEDC /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3A79D2A2F0F418A0078BEDC /* ScrechKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F3EAC0662F0E59C50073C45D /* RPC-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RPC-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3EAC0662F0E59C50073C45D /* SwiftRPC-Sandbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftRPC-Sandbox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -27,7 +28,8 @@
 		F3EAC0632F0E59C50073C45D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
-				F3A79D262F0E5B920078BEDC /* SwordRPC in Frameworks */,
+				F356DE452F4C3F3800387631 /* SwiftRPC in Frameworks */,
+				F356DE462F4C3F3800387631 /* Socket in Frameworks */,
 				F3A79D2B2F0F418A0078BEDC /* ScrechKit in Frameworks */,
 			);
 		};
@@ -45,7 +47,7 @@
 		F3EAC0672F0E59C50073C45D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F3EAC0662F0E59C50073C45D /* RPC-Test.app */,
+				F3EAC0662F0E59C50073C45D /* SwiftRPC-Sandbox.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -53,9 +55,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F3EAC0652F0E59C50073C45D /* RPC-Test */ = {
+		F3EAC0652F0E59C50073C45D /* SwiftRPC-Sandbox */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F3EAC0712F0E59C60073C45D /* Build configuration list for PBXNativeTarget "RPC-Test" */;
+			buildConfigurationList = F3EAC0712F0E59C60073C45D /* Build configuration list for PBXNativeTarget "SwiftRPC-Sandbox" */;
 			buildPhases = (
 				F3EAC0622F0E59C50073C45D /* Sources */,
 				F3EAC0632F0E59C50073C45D /* Frameworks */,
@@ -66,13 +68,14 @@
 			fileSystemSynchronizedGroups = (
 				F3EAC0682F0E59C50073C45D /* RPC-Test */,
 			);
-			name = "RPC-Test";
+			name = "SwiftRPC-Sandbox";
 			packageProductDependencies = (
-				F3A79D252F0E5B920078BEDC /* SwordRPC */,
+				F356DE422F4C3F3800387631 /* SwiftRPC */,
+				F356DE442F4C3F3800387631 /* Socket */,
 				F3A79D2A2F0F418A0078BEDC /* ScrechKit */,
 			);
 			productName = "RPC-Test";
-			productReference = F3EAC0662F0E59C50073C45D /* RPC-Test.app */;
+			productReference = F3EAC0662F0E59C50073C45D /* SwiftRPC-Sandbox.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -90,7 +93,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F3EAC0612F0E59C50073C45D /* Build configuration list for PBXProject "RPC-Test" */;
+			buildConfigurationList = F3EAC0612F0E59C50073C45D /* Build configuration list for PBXProject "SwiftRPC-Sandbox" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -100,15 +103,16 @@
 			mainGroup = F3EAC05D2F0E59C50073C45D;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				F3A79D242F0E5B920078BEDC /* XCRemoteSwiftPackageReference "SwordRPC" */,
 				F3A79D292F0F418A0078BEDC /* XCRemoteSwiftPackageReference "ScrechKit" */,
+				F356DE412F4C3F3800387631 /* XCRemoteSwiftPackageReference "SwiftRPC" */,
+				F356DE432F4C3F3800387631 /* XCRemoteSwiftPackageReference "BlueSocket" */,
 			);
 			preferredProjectObjectVersion = 90;
 			productRefGroup = F3EAC0672F0E59C50073C45D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F3EAC0652F0E59C50073C45D /* RPC-Test */,
+				F3EAC0652F0E59C50073C45D /* SwiftRPC-Sandbox */,
 			);
 		};
 /* End PBXProject section */
@@ -130,7 +134,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		F3EAC06F2F0E59C60073C45D /* Debug configuration for PBXProject "RPC-Test" */ = {
+		F3EAC06F2F0E59C60073C45D /* Debug configuration for PBXProject "SwiftRPC-Sandbox" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -196,7 +200,7 @@
 			};
 			name = Debug;
 		};
-		F3EAC0702F0E59C60073C45D /* Release configuration for PBXProject "RPC-Test" */ = {
+		F3EAC0702F0E59C60073C45D /* Release configuration for PBXProject "SwiftRPC-Sandbox" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -254,7 +258,7 @@
 			};
 			name = Release;
 		};
-		F3EAC0722F0E59C60073C45D /* Debug configuration for PBXNativeTarget "RPC-Test" */ = {
+		F3EAC0722F0E59C60073C45D /* Debug configuration for PBXNativeTarget "SwiftRPC-Sandbox" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -268,6 +272,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "SwiftRPC-Sandbox";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -287,7 +293,7 @@
 			};
 			name = Debug;
 		};
-		F3EAC0732F0E59C60073C45D /* Release configuration for PBXNativeTarget "RPC-Test" */ = {
+		F3EAC0732F0E59C60073C45D /* Release configuration for PBXNativeTarget "SwiftRPC-Sandbox" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -301,6 +307,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "SwiftRPC-Sandbox";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -323,28 +331,36 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F3EAC0612F0E59C50073C45D /* Build configuration list for PBXProject "RPC-Test" */ = {
+		F3EAC0612F0E59C50073C45D /* Build configuration list for PBXProject "SwiftRPC-Sandbox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F3EAC06F2F0E59C60073C45D /* Debug configuration for PBXProject "RPC-Test" */,
-				F3EAC0702F0E59C60073C45D /* Release configuration for PBXProject "RPC-Test" */,
+				F3EAC06F2F0E59C60073C45D /* Debug configuration for PBXProject "SwiftRPC-Sandbox" */,
+				F3EAC0702F0E59C60073C45D /* Release configuration for PBXProject "SwiftRPC-Sandbox" */,
 			);
 			defaultConfigurationName = Release;
 		};
-		F3EAC0712F0E59C60073C45D /* Build configuration list for PBXNativeTarget "RPC-Test" */ = {
+		F3EAC0712F0E59C60073C45D /* Build configuration list for PBXNativeTarget "SwiftRPC-Sandbox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F3EAC0722F0E59C60073C45D /* Debug configuration for PBXNativeTarget "RPC-Test" */,
-				F3EAC0732F0E59C60073C45D /* Release configuration for PBXNativeTarget "RPC-Test" */,
+				F3EAC0722F0E59C60073C45D /* Debug configuration for PBXNativeTarget "SwiftRPC-Sandbox" */,
+				F3EAC0732F0E59C60073C45D /* Release configuration for PBXNativeTarget "SwiftRPC-Sandbox" */,
 			);
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F3A79D242F0E5B920078BEDC /* XCRemoteSwiftPackageReference "SwordRPC" */ = {
+		F356DE432F4C3F3800387631 /* XCRemoteSwiftPackageReference "BlueSocket" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/TopScrech/SwordRPC";
+			repositoryURL = "https://github.com/Kitura/BlueSocket.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.4;
+			};
+		};
+		F356DE412F4C3F3800387631 /* XCRemoteSwiftPackageReference "SwiftRPC" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TopScrech/SwiftRPC";
 			requirement = {
 				branch = master;
 				kind = branch;
@@ -361,10 +377,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F3A79D252F0E5B920078BEDC /* SwordRPC */ = {
+		F356DE422F4C3F3800387631 /* SwiftRPC */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F3A79D242F0E5B920078BEDC /* XCRemoteSwiftPackageReference "SwordRPC" */;
-			productName = SwordRPC;
+			package = F356DE412F4C3F3800387631 /* XCRemoteSwiftPackageReference "SwiftRPC" */;
+			productName = SwiftRPC;
+		};
+		F356DE442F4C3F3800387631 /* Socket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F356DE432F4C3F3800387631 /* XCRemoteSwiftPackageReference "BlueSocket" */;
+			productName = Socket;
 		};
 		F3A79D2A2F0F418A0078BEDC /* ScrechKit */ = {
 			isa = XCSwiftPackageProductDependency;
