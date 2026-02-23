@@ -15,7 +15,7 @@
 /* Begin PBXFileReference section */
 		F3EAC0662F0E59C50073C45D /* SwiftRPC-Sandbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftRPC-Sandbox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3EF5B282F4C418E00E0DD13 /* UNLICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UNLICENSE.txt; sourceTree = "<group>"; };
-		F3EF5B292F4C418F00E0DD13 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		F3EF5B2A2F4C451700E0DD13 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -41,7 +41,7 @@
 		F3EAC05D2F0E59C50073C45D = {
 			isa = PBXGroup;
 			children = (
-				F3EF5B292F4C418F00E0DD13 /* README.txt */,
+				F3EF5B2A2F4C451700E0DD13 /* README.md */,
 				F3EF5B282F4C418E00E0DD13 /* UNLICENSE.txt */,
 				F3EAC0682F0E59C50073C45D /* RPC-Test */,
 				F3EAC0672F0E59C50073C45D /* Products */,
