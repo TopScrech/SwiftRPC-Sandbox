@@ -1,3 +1,3 @@
 # SwiftRPC-Sandbox
 
-Test demonstration of SwiftRPC lib
+Test demonstration of [SwiftRPC](https://github.com/TopScrech/SwiftRPC) lib
