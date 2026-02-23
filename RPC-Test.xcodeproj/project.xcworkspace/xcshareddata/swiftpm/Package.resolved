@@ -1,5 +1,5 @@
 {
-  "originHash" : "114bf86384632c855bc13b03f49c6d9dd339077b4489a80a179807f846218479",
+  "originHash" : "9e6b58e6b6c015ece56fcda1f94d6119a704081247bae2e028c2edbd26651eea",
   "pins" : [
     {
       "identity" : "bluesocket",
@@ -16,7 +16,7 @@
       "location" : "https://github.com/TopScrech/ScrechKit",
       "state" : {
         "branch" : "main",
-        "revision" : "257427e6612bfb87a74a58b541b759796d9723e7"
+        "revision" : "98aa4363c5fe1e0617894a41baa9f297083fb5ac"
       }
     },
     {
@@ -25,7 +25,7 @@
       "location" : "https://github.com/TopScrech/SwordRPC",
       "state" : {
         "branch" : "master",
-        "revision" : "2c9a4a21cca69f4fef4e4380f79f2a7ea9ec1d87"
+        "revision" : "64fa3d8cccc88fbb56f31e4aebf0ea06fabe1f6c"
       }
     }
   ],
