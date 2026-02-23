@@ -27,16 +27,14 @@ struct ConnectionCardView: View {
                 }
 
                 HStack(spacing: 12) {
-                    Button(action: model.connect) {
-                        Label("Connect", systemImage: "bolt.horizontal.circle.fill")
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                    }
+                    Button("Connect", systemImage: "bolt.horizontal.circle.fill", action: model.connect)
                     .buttonStyle(.borderedProminent)
 
-                    Button(action: model.sendPresence) {
-                        Label("Send Presence", systemImage: "paperplane.fill")
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                    }
+                    Button("Disconnect", systemImage: "xmark.circle.fill", action: model.disconnect)
+                        .buttonStyle(.bordered)
+                        .disabled(!model.isConnected)
+
+                    Button("Send Presence", systemImage: "paperplane.fill", action: model.sendPresence)
                     .buttonStyle(.bordered)
                     .disabled(!model.isConnected)
                 }

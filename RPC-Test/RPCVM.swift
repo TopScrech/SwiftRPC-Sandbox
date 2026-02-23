@@ -1,6 +1,7 @@
 import Foundation
 import Combine
 import SwordRPC
+import Socket
 
 @Observable
 final class RPCVM {
@@ -16,6 +17,7 @@ final class RPCVM {
     
     private var rpc: SwordRPC?
     private var activeAppId: String?
+    private var retiredRPCs: [SwordRPC] = []
     
     func connect() {
         let trimmed = appId.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -33,6 +35,23 @@ final class RPCVM {
         
         setStatus("Connecting...")
         rpc?.connect()
+    }
+
+    func disconnect() {
+        guard let rpc else {
+            setConnection(connected: false, message: "Disconnected")
+            return
+        }
+
+        guard closeSocket(in: rpc) else {
+            setStatus("Disconnect unsupported by current package API")
+            return
+        }
+
+        retiredRPCs.append(rpc)
+        self.rpc = nil
+        activeAppId = nil
+        setConnection(connected: false, message: "Disconnected")
     }
     
     func sendPresence() {
@@ -73,6 +92,37 @@ final class RPCVM {
         rpc?.onError { [weak self] _, code, message in
             self?.setConnection(connected: false, message: "Error \(code): \(message)")
         }
+    }
+
+    private func closeSocket(in rpc: SwordRPC) -> Bool {
+        guard let socket = reflectedSocket(in: rpc) else {
+            return false
+        }
+
+        socket.close()
+        return true
+    }
+
+    private func reflectedSocket(in rpc: SwordRPC) -> Socket? {
+        let rpcMirror = Mirror(reflecting: rpc)
+
+        for child in rpcMirror.children where child.label == "socket" {
+            if let socket = child.value as? Socket {
+                return socket
+            }
+
+            let optionalMirror = Mirror(reflecting: child.value)
+
+            guard optionalMirror.displayStyle == .optional else {
+                continue
+            }
+
+            if let socket = optionalMirror.children.first?.value as? Socket {
+                return socket
+            }
+        }
+
+        return nil
     }
     
     private func setStatus(_ message: String) {
