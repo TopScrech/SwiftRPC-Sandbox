@@ -14,6 +14,8 @@
 
 /* Begin PBXFileReference section */
 		F3EAC0662F0E59C50073C45D /* SwiftRPC-Sandbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftRPC-Sandbox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3EF5B282F4C418E00E0DD13 /* UNLICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UNLICENSE.txt; sourceTree = "<group>"; };
+		F3EF5B292F4C418F00E0DD13 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -39,6 +41,8 @@
 		F3EAC05D2F0E59C50073C45D = {
 			isa = PBXGroup;
 			children = (
+				F3EF5B292F4C418F00E0DD13 /* README.txt */,
+				F3EF5B282F4C418E00E0DD13 /* UNLICENSE.txt */,
 				F3EAC0682F0E59C50073C45D /* RPC-Test */,
 				F3EAC0672F0E59C50073C45D /* Products */,
 			);
@@ -350,20 +354,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F356DE432F4C3F3800387631 /* XCRemoteSwiftPackageReference "BlueSocket" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Kitura/BlueSocket.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.4;
-			};
-		};
 		F356DE412F4C3F3800387631 /* XCRemoteSwiftPackageReference "SwiftRPC" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/TopScrech/SwiftRPC";
 			requirement = {
 				branch = master;
 				kind = branch;
+			};
+		};
+		F356DE432F4C3F3800387631 /* XCRemoteSwiftPackageReference "BlueSocket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Kitura/BlueSocket.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.4;
 			};
 		};
 		F3A79D292F0F418A0078BEDC /* XCRemoteSwiftPackageReference "ScrechKit" */ = {
