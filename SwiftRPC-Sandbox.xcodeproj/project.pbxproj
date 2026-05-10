@@ -42,8 +42,8 @@
 			isa = PBXGroup;
 			children = (
 				F3EF5B2A2F4C451700E0DD13 /* README.md */,
-				F3EF5B282F4C418E00E0DD13 /* UNLICENSE.txt */,
 				F3EAC0682F0E59C50073C45D /* RPC-Test */,
+				F3EF5B282F4C418E00E0DD13 /* UNLICENSE.txt */,
 				F3EAC0672F0E59C50073C45D /* Products */,
 			);
 			sourceTree = "<group>";
