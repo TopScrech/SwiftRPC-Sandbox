@@ -13,9 +13,23 @@
   "packages": [
     {
       "kind": "remote",
+      "repository": "https://github.com/TopScrech/swift-update.git",
+      "version": {
+        "up-to-next-major-version": "1.1.2"
+      }
+    },
+    {
+      "kind": "remote",
+      "repository": "https://github.com/SimplyDanny/SwiftLintPlugins",
+      "version": {
+        "up-to-next-major-version": "0.65.1"
+      }
+    },
+    {
+      "kind": "remote",
       "repository": "https://github.com/TopScrech/ScrechKit",
       "version": {
-        "up-to-next-major-version": "1.0.0",
+        "up-to-next-major-version": "1.0.17",
       },
     }, {
       "kind": "remote",
@@ -32,6 +46,9 @@
     },
   ],
   "files": [
+    {
+      "path": ".swiftlint.yml"
+    },
     { "path": "README.md" },
     { "kind": "folder", "path": "RPC-Test", "target-membership": [ "SwiftRPC-Sandbox" ] },
     { "path": "UNLICENSE.txt" },
@@ -39,12 +56,75 @@
       "kind": "group",
       "name": "Products",
       "children": [
+        {
+          "path": "<PRODUCTS>/Package Update Tools.bundle",
+          "id": "33E020411ADB125DA761525F",
+          "type": "wrapper.cfbundle",
+          "index": false
+        },
         { "path": "<PRODUCTS>/SwiftRPC-Sandbox.app", "id": "F3EAC0662F0E59C50073C45D", "type": "wrapper.application", "index": false },
       ],
     },
   ],
   "targets": [
     {
+      "name": "Package Update Tools",
+      "id": "5DF9B9D066028FC152A6F0B0",
+      "product": "id:33E020411ADB125DA761525F",
+      "build-phases": [],
+      "product-type": "bundle",
+      "dependencies": [
+        {
+          "kind": "package",
+          "package": "swift-update",
+          "product-name": "swift-update"
+        }
+      ],
+      "build-settings": {
+        "SDKROOT": "macosx",
+        "SUPPORTED_PLATFORMS": "macosx",
+        "MACOSX_DEPLOYMENT_TARGET": "13.0",
+        "CODE_SIGNING_ALLOWED": "NO",
+        "GENERATE_INFOPLIST_FILE": "YES",
+        "PRODUCT_BUNDLE_IDENTIFIER": "dev.topscrech.SwiftRPC-Sandbox.PackageUpdateTools",
+        "PRODUCT_NAME": "Package Update Tools",
+        "SKIP_INSTALL": "YES"
+      }
+    },
+    {
+      "name": "Check Package Updates",
+      "id": "BE4AC29F783390DC3F296B62",
+      "kind": "aggregate",
+      "dependencies": [
+        "Package Update Tools"
+      ],
+      "build-phases": [
+        {
+          "kind": "script",
+          "name": "Check Package Updates",
+          "run-on-every-build": true,
+          "shell": "/bin/sh",
+          "script": "\"$BUILT_PRODUCTS_DIR/swift-update\" --xcode --path \"$PROJECT_FILE_PATH\" || true"
+        }
+      ],
+      "build-settings": {
+        "ENABLE_USER_SCRIPT_SANDBOXING": "NO",
+        "SDKROOT": "macosx",
+        "SKIP_INSTALL": "YES",
+        "SUPPORTED_PLATFORMS": "macosx",
+        "MACOSX_DEPLOYMENT_TARGET": "13.0"
+      }
+    },
+    {
+      "dependencies": [
+        "Check Package Updates",
+        {
+          "kind": "package",
+          "package": "SwiftLintPlugins",
+          "product-name": "SwiftLintBuildToolPlugin",
+          "product-type": "build-tool-plugin"
+        }
+      ],
       "name": "SwiftRPC-Sandbox",
       "id": "F3EAC0652F0E59C50073C45D",
       "product": "Products/SwiftRPC-Sandbox.app",
